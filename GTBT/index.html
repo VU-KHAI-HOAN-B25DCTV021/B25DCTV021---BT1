@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu Bản Thân</title>
+  <meta name="description"
+    content="Trang giới thiệu bản thân của Vũ Khải Hoàn — sinh viên Học viện Bưu chính Viễn thông.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    /* ── Hero Section ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .hero-greeting {
+      font-size: 56px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .hero-sub {
+      font-size: 20px;
+      color: #555;
+      text-align: center;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .hero-sub strong {
+      color: #111;
+    }
+
+    .scroll-hint {
+      margin-top: 48px;
+      font-size: 13px;
+      color: #aaa;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scroll-hint .arrow {
+      display: inline-block;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    /* ── Sections ── */
+    .section {
+      padding: 80px 24px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 24px;
+    }
+
+    /* ── School info ── */
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 15px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: #888;
+      font-weight: 500;
+    }
+
+    .info-value {
+      color: #111;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* ── Hobbies ── */
+    .hobby-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hobby-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .hobby-item:last-child {
+      border-bottom: none;
+    }
+
+    .hobby-icon {
+      width: 40px;
+      height: 40px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    /* ── Social Links ── */
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .link-item:last-child {
+      border-bottom: none;
+    }
+
+    .link-item:hover {
+      color: #000;
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .link-left svg {
+      width: 20px;
+      height: 20px;
+      fill: #666;
+      flex-shrink: 0;
+    }
+
+    .link-arrow {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero-greeting {
+        font-size: 36px;
+      }
+
+      .hero-sub {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-greeting">Xin chào! 👋</h1>
+    <p class="hero-sub">
+      Mình là <strong>Vũ Khải Hoàn</strong>, sinh viên tại
+      <strong>Học viện Bưu chính Viễn thông</strong>.
+      Rất vui được làm quen với mọi người.
+    </p>
+    <div class="scroll-hint">
+      <span class="arrow">↓</span> Kéo xuống để xem thêm
+    </div>
+  </section>
+
+  <!-- Thông tin cá nhân -->
+  <section class="section">
+    <p class="section-label">01 — Thông tin</p>
+    <h2 class="section-title">Thông tin cá nhân</h2>
+    <div class="info-row">
+      <span class="info-label">Họ và tên</span>
+      <span class="info-value">Vũ Khải Hoàn</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Trường</span>
+      <span class="info-value">Học viện Bưu chính Viễn thông</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Vị trí</span>
+      <span class="info-value">Sinh viên</span>
+    </div>
+  </section>
+
+  <!-- Sở thích -->
+  <section class="section">
+    <p class="section-label">02 — Sở thích</p>
+    <h2 class="section-title">Những điều mình thích</h2>
+    <ul class="hobby-list">
+      <li class="hobby-item">
+        <span class="hobby-icon">🎮</span>
+        <span>Chơi game</span>
+      </li>
+      <li class="hobby-item">
+        <span class="hobby-icon">🎵</span>
+        <span>Nghe nhạc</span>
+      </li>
+      <li class="hobby-item">
+        <span class="hobby-icon">💻</span>
+        <span>Lập trình</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Liên kết -->
+  <section class="section">
+    <p class="section-label">03 — Liên kết</p>
+    <h2 class="section-title">Kết nối với mình</h2>
+    <div class="link-list">
+      <a href="https://www.facebook.com/I.can.fix.her/" target="_blank" rel="noopener" class="link-item"
+        id="link-facebook">
+        <span class="link-left">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12z" />
+          </svg>
+          Facebook
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noopener" class="link-item" id="link-github">
+        <span class="link-left">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+          GitHub
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">© 2026 Vũ Khải Hoàn</footer>
+
+</body>
+
+</html>
